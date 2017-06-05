@@ -431,6 +431,18 @@ typedef NS_ENUM(NSUInteger, FSCalendarOrientation) {
     return size;
 }
 
+#pragma mark - Accessibility
+
+- (BOOL)isAccessibilityElement
+{
+    return NO;
+}
+
+- (NSArray *)accessibilityElements
+{
+    return @[self.collectionView];
+}
+
 #pragma mark - <UICollectionViewDataSource>
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
